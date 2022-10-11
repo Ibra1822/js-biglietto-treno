@@ -50,13 +50,9 @@ else if(eta > etaAnziani){
   scontoAnziani
 
   document.getElementById('tutto').innerHTML= scontoTotAnziani.toFixed(2);
-
-
 }
 
-
-
-
+document.getElementById('tutto').innerHTML= prezzoStandard.toFixed(2);
 
 
 
