@@ -5,7 +5,6 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L’output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). */
 
-
 //  quanti km   0.21 al km    età  -20% min    -40% over 65
 
 
@@ -17,27 +16,53 @@ let prezzoStandard =  km * prezzokm;
 
 console.log(prezzoStandard);
 
+
 const eta = parseInt(prompt('Quanti anni hai?'));
 
 const etaMinori = 18;
  
 const scontoMinori=  0.20;
 
-const scontoTotMinori = (prezzoStandard - scontoMinori);
+let scontoTotMinori =  prezzoStandard * scontoMinori;
+
 
 const etaAnziani = 65; 
 
 const scontoAnziani = 0.50;
 
-const scontoTotAnziani = (prezzoStandard - scontoAnziani)
+let scontoTotAnziani =  prezzoStandard * scontoAnziani;
+
 
 if(eta < etaMinori){
+
   console.log(scontoTotMinori);
+
+  scontoTotMinori
+
+  document.getElementById('tutto').innerHTML= scontoTotMinori.toFixed(2);
+
 }
+
 else if(eta > etaAnziani){
   
   console.log(scontoTotAnziani);
+
+  scontoAnziani
+
+  document.getElementById('tutto').innerHTML= scontoTotAnziani.toFixed(2);
+
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
